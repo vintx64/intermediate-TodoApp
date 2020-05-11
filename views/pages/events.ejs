@@ -1,0 +1,24 @@
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Todo Name:</th>
+            <th>Todo Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (var event of events ){ %>
+        <tr>
+            <td><%- include('chkBox') %></td>
+            <td><%= event.todoName %></td>
+            <td><%= event.todoDescription %></td>
+            <td>
+                <a href="/events/<%= event.slug %>" class="btn btn-outline-success">Show</a>
+                <a href="/events/<%= event.slug%>/update" class="btn btn-outline-info">Edit</a>
+                <a href="/events/<%= event.slug%>/delete" class="btn btn-outline-danger">Remove</a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+    
+</table>

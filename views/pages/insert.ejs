@@ -1,0 +1,20 @@
+<div class="jumbotron m-5 text-center bg-dark text-white">
+    <div class="container">
+        <h2> Create Event </h2>
+    </div>
+</div>
+<div class="row d-flex justify-content-center">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form action="/events/insert" method="POST">
+            <div class="form-group">
+                <label for="eventName"> Event Name</label>
+                <input type="text" name="todoName" placeholder="Event Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description"> Event Description</label>
+                <textarea name="todoDescription" class="form-control" rows="5" placeholder="Event Description"></textarea>
+            </div>
+            <input type="submit" value="Add Event" class="btn btn-primary btn-md">
+        </form>
+    </div>
+</div>
